@@ -5,18 +5,19 @@ using UnityEngine.Video;
 
 public class Caustics : MonoBehaviour
 {
-    private Projector projector;
+    public Projector projector;
     public Texture2D[] frames;
-    private float fps = 25;
+    private float fps = 15; //25
     private int frameIndex;
 
     //// Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         projector = GetComponent<Projector>();
 
         NextFrame();
         InvokeRepeating("NextFrame", 1 / fps, 1 / fps);
+        
     }
 
     void NextFrame()

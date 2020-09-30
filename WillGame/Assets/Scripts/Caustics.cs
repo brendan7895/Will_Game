@@ -11,7 +11,7 @@ public class Caustics : MonoBehaviour
     private int frameIndex;
 
     //// Start is called before the first frame update
-    void Awake()
+    void Start()
     {
         projector = GetComponent<Projector>();
 
@@ -26,7 +26,7 @@ public class Caustics : MonoBehaviour
         frameIndex++;
         if (frameIndex >= frames.Length)
         {
-            frameIndex = 0;
+            frameIndex = 1;
         }
     }
 }

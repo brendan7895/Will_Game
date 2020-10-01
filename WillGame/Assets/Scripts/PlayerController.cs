@@ -57,8 +57,18 @@ public class PlayerController : MonoBehaviour
         activeHoverSpeed = Mathf.Lerp(activeHoverSpeed, Input.GetAxisRaw("Hover")
             * hoverSpeed, hoverAcceleration * Time.deltaTime);
 
-        transform.position += transform.forward * activeForwardSpeed * Time.deltaTime;
-        transform.position += transform.right * activeStrafeSpeed * Time.deltaTime;
-        transform.position += transform.up * activeHoverSpeed * Time.deltaTime;
+        // Boost mechanic - checks if the user is holding down shift
+        if(Input.GetKey("left shift"))
+        {
+            transform.position += transform.forward * activeForwardSpeed * Time.deltaTime * 2;
+            transform.position += transform.right * activeStrafeSpeed * Time.deltaTime * 2;
+            transform.position += transform.up * activeHoverSpeed * Time.deltaTime * 2;
+        }
+        else
+        {
+            transform.position += transform.forward * activeForwardSpeed * Time.deltaTime;
+            transform.position += transform.right * activeStrafeSpeed * Time.deltaTime;
+            transform.position += transform.up * activeHoverSpeed * Time.deltaTime;
+        }
     }
 }

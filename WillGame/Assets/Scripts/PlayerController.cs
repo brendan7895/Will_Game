@@ -29,11 +29,14 @@ public class PlayerController : MonoBehaviour
     float rotationSpeed = 500;
     bool startRoll = false;
 
+    Transform cameraOld;
+
     // Start is called before the first frame update
     void Start()
     {
         screenCenter.x = Screen.width / 2;
         screenCenter.y = Screen.height / 2;
+
     }
 
     // Update is called once per frame
@@ -78,6 +81,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.Tab) && !startRoll)
         {
             startRoll = true;
+            //Camera.main.transform.parent = null;          
         }
 
         if (startRoll)
@@ -90,7 +94,6 @@ public class PlayerController : MonoBehaviour
     void Roll()
     {
         float rotation = rotationSpeed * Time.deltaTime;
-
         if (rotationRoll > rotation)
         {
             rotationRoll -= rotation;
@@ -99,17 +102,17 @@ public class PlayerController : MonoBehaviour
         {
             rotation = rotationRoll;
             rotationRoll = 0;
+           
+            Camera.main.transform.SetParent(this.transform);
+
+            startRoll = false;
+            rotationRoll = 360;           
         }
-        //Camera.main.transform.Rotate(0, 0, -rotation);
         transform.Rotate(0, 0, rotation);
+        //Camera.main.transform.Rotate(0, 0, -rotation);
 
-        StartCoroutine(WaitForRoll());
+        //Camera.main.transform.Rotate(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), -rotation);
+        
     }
 
-    IEnumerator WaitForRoll()
-    {
-        yield return new WaitForSeconds(1.8f);
-        startRoll = false;
-        rotationRoll = 360;
-    }
 }

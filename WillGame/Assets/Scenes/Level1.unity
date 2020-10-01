@@ -294,7 +294,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 1705348900}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &988910831 stripped
 Transform:
@@ -309,6 +309,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1705348900}
     m_Modifications:
+    - target: {fileID: 1028135938405906031, guid: ccd98740fab8167499e9c07d9f85d6f6,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5743987139028999057, guid: ccd98740fab8167499e9c07d9f85d6f6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -317,7 +322,7 @@ PrefabInstance:
     - target: {fileID: 5743987139028999057, guid: ccd98740fab8167499e9c07d9f85d6f6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5743987139028999057, guid: ccd98740fab8167499e9c07d9f85d6f6,
         type: 3}
@@ -347,7 +352,7 @@ PrefabInstance:
     - target: {fileID: 5743987139028999057, guid: ccd98740fab8167499e9c07d9f85d6f6,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5743987139028999057, guid: ccd98740fab8167499e9c07d9f85d6f6,
         type: 3}
@@ -373,6 +378,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 2.4999998
+      objectReference: {fileID: 0}
+    - target: {fileID: 5743987139028999057, guid: ccd98740fab8167499e9c07d9f85d6f6,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8785929163961444738, guid: ccd98740fab8167499e9c07d9f85d6f6,
         type: 3}
@@ -537,8 +547,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 6, z: 0}
   m_LocalScale: {x: 2, y: 0.5, z: 1}
   m_Children:
-  - {fileID: 729075782}
   - {fileID: 988910831}
+  - {fileID: 729075782}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

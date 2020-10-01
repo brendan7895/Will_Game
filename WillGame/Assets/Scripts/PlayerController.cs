@@ -25,6 +25,10 @@ public class PlayerController : MonoBehaviour
     public float rollSpeed = 90;
     public float rollAcceleration = 3.5f;
 
+    float rotationRoll = 360;
+    float rotationSpeed = 500;
+    bool startRoll = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -58,7 +62,7 @@ public class PlayerController : MonoBehaviour
             * hoverSpeed, hoverAcceleration * Time.deltaTime);
 
         // Boost mechanic - checks if the user is holding down shift
-        if(Input.GetKey("left shift"))
+        if (Input.GetKey("left shift"))
         {
             transform.position += transform.forward * activeForwardSpeed * Time.deltaTime * 2;
             transform.position += transform.right * activeStrafeSpeed * Time.deltaTime * 2;
@@ -70,5 +74,42 @@ public class PlayerController : MonoBehaviour
             transform.position += transform.right * activeStrafeSpeed * Time.deltaTime;
             transform.position += transform.up * activeHoverSpeed * Time.deltaTime;
         }
+
+        if (Input.GetKey(KeyCode.Tab) && !startRoll)
+        {
+            startRoll = true;
+        }
+
+        if (startRoll)
+        {
+            Roll();
+        }
+    }
+
+    
+    void Roll()
+    {
+        float rotation = rotationSpeed * Time.deltaTime;
+
+        if (rotationRoll > rotation)
+        {
+            rotationRoll -= rotation;
+        }
+        else
+        {
+            rotation = rotationRoll;
+            rotationRoll = 0;
+        }
+        //Camera.main.transform.Rotate(0, 0, -rotation);
+        transform.Rotate(0, 0, rotation);
+
+        StartCoroutine(WaitForRoll());
+    }
+
+    IEnumerator WaitForRoll()
+    {
+        yield return new WaitForSeconds(1.8f);
+        startRoll = false;
+        rotationRoll = 360;
     }
 }

@@ -81,6 +81,8 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.Tab) && !startRoll)
         {
             startRoll = true;
+
+            //removes the camera as a child
             //Camera.main.transform.parent = null;          
         }
 
@@ -103,15 +105,17 @@ public class PlayerController : MonoBehaviour
             rotation = rotationRoll;
             rotationRoll = 0;
            
-            Camera.main.transform.SetParent(this.transform);
+            //sets the camera parent to the game object
+            //Camera.main.transform.SetParent(this.transform);
 
             startRoll = false;
             rotationRoll = 360;           
         }
         transform.Rotate(0, 0, rotation);
+
+        //rotates the camera the oppisite way around its own axis not the parent
         //Camera.main.transform.Rotate(0, 0, -rotation);
 
-        //Camera.main.transform.Rotate(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), -rotation);
         
     }
 

@@ -19,7 +19,7 @@ public class GenerateInfiniteTerrain : MonoBehaviour
     public GameObject player;
 
     int planeSize = 10;
-    int halfTileX = 10;
+    int halfTileX = 10; //Terrain size
     int halfTileZ = 10;
 
     Vector3 startPos;

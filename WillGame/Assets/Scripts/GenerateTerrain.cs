@@ -10,7 +10,7 @@ public class GenerateTerrain : MonoBehaviour
     public float detailScale = 5;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         Mesh mesh = this.GetComponent<MeshFilter>().mesh;
         Vector3[] vertices = mesh.vertices;

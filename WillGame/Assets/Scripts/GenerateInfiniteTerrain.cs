@@ -27,7 +27,7 @@ public class GenerateInfiniteTerrain : MonoBehaviour
     Hashtable tiles = new Hashtable();
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         RenderSettings.fogColor = Camera.main.backgroundColor;
         RenderSettings.fogDensity = 0.02f;

@@ -44,6 +44,8 @@ GameObject:
   - component: {fileID: 7874436578176154363}
   - component: {fileID: 3938482804074492039}
   - component: {fileID: 5477123257273960359}
+  - component: {fileID: 6768513323452123214}
+  - component: {fileID: 1261604051970388018}
   m_Layer: 0
   m_Name: Coral_tree_2
   m_TagString: Untagged
@@ -112,6 +114,35 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &6768513323452123214
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4273797437883294241}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.4563789, y: 2.5726335, z: 3.1569433}
+  m_Center: {x: 0.1299558, y: -0.104954086, z: 1.3226423}
+--- !u!54 &1261604051970388018
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4273797437883294241}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!1 &5105285550688671656
 GameObject:
   m_ObjectHideFlags: 0
@@ -123,6 +154,8 @@ GameObject:
   - component: {fileID: 9108603578373452166}
   - component: {fileID: 7033607900644542436}
   - component: {fileID: 103860940321946131}
+  - component: {fileID: 6225345599207182590}
+  - component: {fileID: 8817319916245061191}
   m_Layer: 0
   m_Name: Rock_with_Coral_3
   m_TagString: Untagged
@@ -191,6 +224,35 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!54 &6225345599207182590
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5105285550688671656}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
+--- !u!65 &8817319916245061191
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5105285550688671656}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.2379005, y: 2.9159243, z: 1.8726424}
+  m_Center: {x: -0.01741898, y: 0.119767636, z: 0.69993937}
 --- !u!1 &5330354304172288042
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,6 +264,8 @@ GameObject:
   - component: {fileID: 3840485061538042813}
   - component: {fileID: 3444333519393027256}
   - component: {fileID: 1672702693553740308}
+  - component: {fileID: 7012650174508146349}
+  - component: {fileID: 4212010931825121645}
   m_Layer: 0
   m_Name: Rock_with_Coral_2
   m_TagString: Untagged
@@ -270,3 +334,32 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &7012650174508146349
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5330354304172288042}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.2397869, y: 3.146083, z: 2.0281534}
+  m_Center: {x: -0.05422294, y: -0.010324541, z: 0.62832445}
+--- !u!54 &4212010931825121645
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5330354304172288042}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0

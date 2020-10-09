@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6511008734758339854}
   - component: {fileID: 7526751967904095016}
   - component: {fileID: 5093321472372708381}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CausticWater
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 5355456427882386267}
   - component: {fileID: 5355456427882386266}
   - component: {fileID: 5355456427882386269}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TerrainPlane
   m_TagString: Untagged
   m_Icon: {fileID: 0}

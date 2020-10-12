@@ -29,17 +29,36 @@ public class PlayerController : MonoBehaviour
     float rotationSpeed = 500;
     bool startRoll = false;
 
+    ////float speed = 15;
+    //float turnSmoothTime = 0.1f;
+    //float turnSmoothVelocity;
+    //public Transform cam;
+
     // Start is called before the first frame update
     void Start()
     {
         screenCenter.x = Screen.width / 2;
         screenCenter.y = Screen.height / 2;
-
     }
 
     // Update is called once per frame
     void Update()
     {
+        //float h = Input.GetAxisRaw("Horizontal");
+        //float v = Input.GetAxisRaw("Vertical");
+
+        //Vector3 direction = new Vector3(h, 0, v).normalized;
+
+        //if(direction.magnitude >= 0.1f)
+        //{
+        //    float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
+        //    float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
+        //    transform.rotation = Quaternion.Euler(0, angle, 0);
+
+        //    Vector3 moveDirection = Quaternion.Euler(0, targetAngle, 0) * Vector3.forward;
+        //    transform.position += moveDirection.normalized * forwardSpeed * Time.deltaTime;
+        //}
+
         lookInput.x = Input.mousePosition.x;
         lookInput.y = Input.mousePosition.y;
 

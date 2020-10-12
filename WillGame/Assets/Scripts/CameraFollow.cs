@@ -12,7 +12,7 @@ public class CameraFollow : MonoBehaviour
     Quaternion currentRotation;
     float rotationDamping = 3;
     float distance = 15.0f;
-    float height = 5.0f;
+    float height = 3.0f;
 
     void LateUpdate()
     {

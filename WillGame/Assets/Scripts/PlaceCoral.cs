@@ -46,10 +46,16 @@ public class PlaceCoral : MonoBehaviour
                     hit.point.y,
                     placeCoral[i].transform.position.z);
 
-                Debug.Log(hit.point.y);
+                //Debug.Log(hit.point.y);
                 placeCoral[i].transform.position = groundPos;
             }
+            
+        }
 
+        for(int i = 0; i < placeCoral.Length; i++)
+        {
+            Debug.Log(JsonUtility.ToJson(placeCoral[i].transform.position));
+            
         }
 
         //coral = new GameObject[30];

@@ -29,8 +29,6 @@ public class PlayerController : MonoBehaviour
     float rotationSpeed = 500;
     bool startRoll = false;
 
-    Transform cameraOld;
-
     // Start is called before the first frame update
     void Start()
     {

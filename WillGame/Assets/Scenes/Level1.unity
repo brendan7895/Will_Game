@@ -225,6 +225,7 @@ GameObject:
   - component: {fileID: 729075781}
   - component: {fileID: 729075780}
   - component: {fileID: 729075783}
+  - component: {fileID: 729075784}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -310,6 +311,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1705348900}
+--- !u!114 &729075784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 729075779}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41628e4b93735824692c89d3ea2a08bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  yMinAngle: 10
+  yMaxAngle: 50
+  lookAt: {fileID: 1705348900}
+  cameraTransform: {fileID: 729075782}
+  cam: {fileID: 0}
+  distance: 20
+  currentX: 0
+  currentY: 0
+  sensitivityX: 4
+  sensitivityY: 1
 --- !u!4 &985827370 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: b62cb142727edbe47b3bb34ccb7bb86e,
@@ -370,7 +393,7 @@ MonoBehaviour:
   - {fileID: 2083027848882005502, guid: 940ec8abcddac3940b11f423521ec2cf, type: 3}
   - {fileID: 3746667546654535524, guid: 4c4df5e5ec1e2cf45afdb5f036a88535, type: 3}
   - {fileID: 4788410442741086899, guid: d005574bd6e403044a6b953235a52342, type: 3}
-  coral: []
+  corals: []
   ground:
     serializedVersion: 2
     m_Bits: 256
@@ -618,8 +641,8 @@ MonoBehaviour:
   forwardSpeed: 15
   strafeSpeed: 7.5
   hoverSpeed: 5
-  lookRotateSpeed: 30
-  rollSpeed: 30
+  lookRotateSpeed: 50
+  rollSpeed: 90
   rollAcceleration: 3.5
 --- !u!136 &1705348897
 CapsuleCollider:

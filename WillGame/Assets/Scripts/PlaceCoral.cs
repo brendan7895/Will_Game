@@ -54,8 +54,7 @@ public class PlaceCoral : MonoBehaviour
 
         for(int i = 0; i < placeCoral.Length; i++)
         {
-            Debug.Log(JsonUtility.ToJson(placeCoral[i].transform.position));
-            
+            Debug.Log(JsonUtility.ToJson(placeCoral[i].transform.position));           
         }
 
         //coral = new GameObject[30];
@@ -87,5 +86,4 @@ public class PlaceCoral : MonoBehaviour
 
 
     }
-
 }

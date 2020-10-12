@@ -8,7 +8,7 @@ public class LookAtPlayer : MonoBehaviour
 
     void Start()
     {
-        //gameObject.transform.Rotate(-180, 0, 0);
+        
     }
 
     // Update is called once per frame

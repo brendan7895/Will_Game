@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 public class PlaceCoral : MonoBehaviour
@@ -10,6 +11,8 @@ public class PlaceCoral : MonoBehaviour
     Transform[] coral;
     public List<GameObject> corals;
     GameObject[] placeCoral = new GameObject[400];
+
+    string json;
 
     public LayerMask ground;
 
@@ -52,38 +55,13 @@ public class PlaceCoral : MonoBehaviour
             
         }
 
-        for(int i = 0; i < placeCoral.Length; i++)
-        {
-            Debug.Log(JsonUtility.ToJson(placeCoral[i].transform.position));           
-        }
-
-        //coral = new GameObject[30];
-        //for (int i = 0; i < coral.Length; i++)
+        //for (int i = 0; i < placeCoral.Length; i++)
         //{
-        //    Vector3 pos = new Vector3(Random.Range(-50, 50), 4.1f, Random.Range(-50, 50));
-
-        //    coral[i] = coralTypes[Random.Range(0, 4)];
-        //    coral[i] = Instantiate(coral[i], pos, Quaternion.identity);
-
-        //    RaycastHit hit;
-        //    Ray ray = new Ray(coral[i].transform.position, Vector3.down);
-        //    if (Physics.Raycast(ray, out hit, 20, ground))
-        //    {
-        //        Vector3 groundPos = new Vector3(
-        //            coral[i].transform.position.x,
-        //            hit.point.y,
-        //            coral[i].transform.position.z);
-
-        //        Debug.Log(hit.point.y);
-        //        coral[i].transform.position = groundPos;
-        //    }
-
-        //    if (coral[i].name.Contains("Coral4"))
-        //    {
-        //        coral[i].transform.Rotate(-90, 0, 0);
-        //    }
+        //    json += JsonUtility.ToJson(placeCoral[i].transform.position);
+        //    json += "\n";
+            
         //}
-
-
+        //Debug.Log(json);
+        //File.WriteAllText(Application.dataPath + "/coral.json", json);
     }
 }

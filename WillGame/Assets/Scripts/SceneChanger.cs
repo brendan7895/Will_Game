@@ -9,6 +9,7 @@ public class SceneChanger : MonoBehaviour
     //public Button play;
     //public Button settings;
     //public Button levels;
+    public GameObject tutorial;
 
     public Button[] buttons;
 
@@ -44,7 +45,8 @@ public class SceneChanger : MonoBehaviour
     void PlayScene()
     {
         Debug.Log("Play");
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("TutorialMovement");
+        tutorial.gameObject.SetActive(true);
     }
     void SettingScene()
     {

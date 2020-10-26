@@ -11,6 +11,7 @@ public class Tutorial : MonoBehaviour
     public GameObject interact;
     public GameObject boost;
     public GameObject attack;
+    public GameObject tutorialDone;
 
     public GameObject player;
     public GameObject character;
@@ -21,6 +22,7 @@ public class Tutorial : MonoBehaviour
     public Button btnCloseInteract;
     public Button btnCloseBoost;
     public Button btnCloseAttack;
+    public Button btnCloseTutorial;
 
     private bool movementComplete = false;
     private bool dodgeComplete = false;
@@ -40,6 +42,7 @@ public class Tutorial : MonoBehaviour
         boost.SetActive(false);
         attack.SetActive(false);
         shark.SetActive(false);
+        tutorialDone.SetActive(false);
 
         movementComplete = false;
 
@@ -50,6 +53,7 @@ public class Tutorial : MonoBehaviour
         btnCloseInteract.onClick.AddListener(CloseInteract);
         btnCloseBoost.onClick.AddListener(CloseBoost);
         btnCloseAttack.onClick.AddListener(CloseAttack);
+        btnCloseTutorial.onClick.AddListener(CloseTutorial);
 
         dist = 0f;
     }
@@ -78,7 +82,7 @@ public class Tutorial : MonoBehaviour
 
         if(Vector3.Distance(player.transform.position, character.transform.position) <= 5 )
         {
-            if(Input.GetKeyDown(KeyCode.Space) && movementComplete == true && dodgeComplete == true)
+            if(Input.GetKeyDown(KeyCode.I) && movementComplete == true && dodgeComplete == true)
             {
                 StartCoroutine(InteractDone());
                 interactComplete = true;
@@ -94,7 +98,7 @@ public class Tutorial : MonoBehaviour
             }
         }
 
-        if (Vector3.Distance(player.transform.position, shark.transform.position) <= 5)
+        if (Vector3.Distance(player.transform.position, shark.transform.position) <= 10)
         {
             if (Input.GetKeyDown(KeyCode.T))
             {
@@ -140,6 +144,12 @@ public class Tutorial : MonoBehaviour
         Time.timeScale = 1;
     }
 
+    public void CloseTutorial()
+    {
+        tutorialDone.SetActive(false);
+        Time.timeScale = 1;
+    }
+
     IEnumerator MovementDone()
     {
         yield return new WaitForSeconds(2.5f);
@@ -182,5 +192,9 @@ public class Tutorial : MonoBehaviour
     {
         shark.SetActive(false);
         yield return new WaitForSeconds(2.5f);
+
+        Time.timeScale = 0;
+
+        tutorialDone.SetActive(true);
     }
 }

@@ -3189,7 +3189,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1. Hold done the tab key to temporarily increase the speed of your character
+  m_Text: 1. Hold down the tab key to temporarily increase the speed of your character
 --- !u!222 &1813650206
 CanvasRenderer:
   m_ObjectHideFlags: 0

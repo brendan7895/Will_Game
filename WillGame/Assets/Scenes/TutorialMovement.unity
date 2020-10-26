@@ -1972,7 +1972,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Totorial COmplete
+  m_Text: Tutorial COmplete
 --- !u!222 &898064743
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2130,18 +2130,23 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: f6fb6608368ff7f4fa12d5ddede80527, type: 3}
-    m_FontSize: 55
-    m_FontStyle: 1
+    m_FontSize: 43
+    m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 0
     m_MaxSize: 134
     m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: you may now continue with gameplay
+  m_Text: "welcome to the great barrier reef and having seen the state marine wildlife
+    has been effected by pollution it is up to you to help save your friends from
+    this devastating impact. Its all in your hands to be the light in the dark adversity
+    and save the reef from being another victim of marine destruction. Don\u2019t
+    be afraid, be bold and stand up and help make the change to save the marine life
+    for the future of our generation. "
 --- !u!222 &1066574767
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -100,7 +100,7 @@ public class Tutorial : MonoBehaviour
 
         if (Vector3.Distance(player.transform.position, shark.transform.position) <= 10)
         {
-            if (Input.GetKeyDown(KeyCode.T))
+            if (Input.GetMouseButtonDown(0))
             {
                 if (movementComplete == true && dodgeComplete == true && interactComplete == true && boostComplete == true)
                 {

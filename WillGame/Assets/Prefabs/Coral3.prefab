@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7706389549595280121}
   - component: {fileID: 8043526821106846565}
   - component: {fileID: 6615683880307239999}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Seaweed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 7989827242350653452}
   - component: {fileID: 4940666509268096279}
   - component: {fileID: 3095430693184379942}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Tube_Coral_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -167,7 +167,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 406889192640290167}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Coral3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -202,7 +202,7 @@ GameObject:
   - component: {fileID: 9212257873248992741}
   - component: {fileID: 889828802825593481}
   - component: {fileID: 478428796490498512}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Starfish
   m_TagString: Untagged
   m_Icon: {fileID: 0}

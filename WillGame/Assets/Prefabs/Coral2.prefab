@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3076872317541636077}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Coral2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 7874436578176154363}
   - component: {fileID: 3938482804074492039}
   - component: {fileID: 5477123257273960359}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Coral_tree_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 9108603578373452166}
   - component: {fileID: 7033607900644542436}
   - component: {fileID: 103860940321946131}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Rock_with_Coral_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -202,7 +202,7 @@ GameObject:
   - component: {fileID: 3840485061538042813}
   - component: {fileID: 3444333519393027256}
   - component: {fileID: 1672702693553740308}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Rock_with_Coral_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -21,6 +21,8 @@ public class PlayerController : MonoBehaviour
     private Vector2 screenCenter;
     private Vector2 mouseDistance;
 
+    Vector3 rot;
+    
     private float rollInput;
     public float rollSpeed = 90;
     public float rollAcceleration = 3.5f;
@@ -69,8 +71,13 @@ public class PlayerController : MonoBehaviour
 
         rollInput = Mathf.Lerp(rollInput, Input.GetAxisRaw("Roll"), rollAcceleration * Time.deltaTime);
 
+        
+
         transform.Rotate(-mouseDistance.y * lookRotateSpeed
-            * Time.deltaTime, mouseDistance.x * lookRotateSpeed * Time.deltaTime, rollInput * rollSpeed * Time.deltaTime, Space.Self);
+            * Time.deltaTime, Mathf.Clamp(mouseDistance.x, -45, 45) * lookRotateSpeed * Time.deltaTime, rollInput * rollSpeed * Time.deltaTime, Space.Self);
+
+        //transform.Rotate(-mouseDistance.y * lookRotateSpeed
+        //    * Time.deltaTime, mouseDistance.x * lookRotateSpeed * Time.deltaTime, rollInput * rollSpeed * Time.deltaTime, Space.Self);
 
         activeForwardSpeed = Mathf.Lerp(activeForwardSpeed, Input.GetAxisRaw("Vertical")
             * forwardSpeed, forwardAcceleration * Time.deltaTime);

@@ -700,7 +700,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 1335
+    m_Bits: 4294967295
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -1141,7 +1141,11 @@ MonoBehaviour:
   - {fileID: 2083027848882005502, guid: 940ec8abcddac3940b11f423521ec2cf, type: 3}
   - {fileID: 3746667546654535524, guid: 4c4df5e5ec1e2cf45afdb5f036a88535, type: 3}
   - {fileID: 4788410442741086899, guid: d005574bd6e403044a6b953235a52342, type: 3}
+  fishType:
+  - {fileID: 4461077462459474816, guid: 66b0a34b03c14f04783c6877b6f4c875, type: 3}
+  - {fileID: 6189032914530365145, guid: 58f78b95282e2394ea416b988c7b24a6, type: 3}
   corals: []
+  fishList: []
   ground:
     serializedVersion: 2
     m_Bits: 256

@@ -6,8 +6,6 @@ public class MinimapFollowCamera : MonoBehaviour
 {
     public Transform target;
 
-    float rotationDamping = 3;
-    float distance = 15.0f;
     float height = 3.0f;
 
     void LateUpdate()

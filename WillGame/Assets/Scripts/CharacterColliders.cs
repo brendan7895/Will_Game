@@ -34,27 +34,6 @@ public class CharacterColliders : MonoBehaviour
 
     void ButtonClick()
     {
-        
-        if(characterText.text == "Maron")
-        {
-            dialogText.text = "Add dialog";
-        }
-        if (characterText.text == "Nerio")
-        {
-            dialogText.text = "Add dialog";
-        }
-        if (characterText.text == "Sirius")
-        {
-            dialogText.text = "Add dialog";
-        }
-
-        buttons[0].SetActive(false);
-        buttons[1].SetActive(true);
-    }
-
-    void StartButtonClick()
-    {
-        Debug.LogError("Add code to change to other scenes");
 
         if (characterText.text == "Maron")
         {
@@ -68,10 +47,21 @@ public class CharacterColliders : MonoBehaviour
         {
             dialogText.text = "Add dialog and load scene";
         }
+
+        buttons[0].SetActive(false);
+        buttons[1].SetActive(true);
+    }
+
+    void StartButtonClick()
+    {
+        Debug.LogError("Add code to change to other scenes");
+
+       
     }
 
     void OnTriggerEnter(Collider col)
     {
+
         if(col.tag == "Shrimp")
         {
             //col.transform.LookAt(gameObject.transform.position);
@@ -82,7 +72,7 @@ public class CharacterColliders : MonoBehaviour
             characterImage.sprite = images[0];
             characterText.text = "Maron";
 
-            dialogText.text = "Hi! My name is Maron...";
+            dialogText.text = "Hi! My name is Maron... Add more";
         }
 
         if (col.tag == "Seahorse")
@@ -94,7 +84,7 @@ public class CharacterColliders : MonoBehaviour
             characterImage.sprite = images[1];
             characterText.text = "Nerio";
 
-            dialogText.text = "Hi! My name is Nerio...";
+            dialogText.text = "Hi! My name is Nerio... Add more";
         }
 
         if (col.tag == "Shark")
@@ -105,8 +95,9 @@ public class CharacterColliders : MonoBehaviour
             characterImage.sprite = images[2];
             characterText.text = "Sirius";
 
-            dialogText.text = "Hi! My name is Sirius...";
+            dialogText.text = "Hi! My name is Sirius... Add more";
         }
+
     }
 
     void OnTriggerExit(Collider col)

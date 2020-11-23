@@ -13,9 +13,6 @@ public class CharacterColliders : MonoBehaviour
     public Text dialogText; //dialog text in main box
 
     public Button button;
-    public Button startButton;
-
-    public GameObject[] buttons = new GameObject[2];
 
     public static bool level1complete = false;
     public static bool level2complete = false;
@@ -25,11 +22,8 @@ public class CharacterColliders : MonoBehaviour
     void Start()
     {
         canvas.SetActive(false);
-        buttons[0].SetActive(true);
-        buttons[1].SetActive(false);
 
-        button.onClick.AddListener(ButtonClick);
-        startButton.onClick.AddListener(StartButtonClick);
+        button.onClick.AddListener(StartButtonClick);
 
         PlayerController.playerMovement = true;
     }
@@ -37,27 +31,6 @@ public class CharacterColliders : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-    }
-
-    void ButtonClick()
-    {
-
-        if (characterText.text == "Maron")
-        {
-            dialogText.text = "Come find me when you're done.";
-        }
-        if (characterText.text == "Nerio")
-        {
-            dialogText.text = "Add dialog and load scene";
-        }
-        if (characterText.text == "Sirius")
-        {
-            canvas.SetActive(false);
-            //dialogText.text = "Add dialog and load scene";
-        }
-
-        buttons[0].SetActive(false);
-        buttons[1].SetActive(true);
     }
 
     void StartButtonClick()
@@ -114,12 +87,15 @@ public class CharacterColliders : MonoBehaviour
             characterImage.sprite = images[0];
             characterText.text = "Maron";
 
-            dialogText.text = "Hi! My name is Maron... Add more";
+            dialogText.text = "HEY KAI! we are in trouble and we need your help!\n" +
+                "The reef has come under threat.Our habitats and sea friends have fallen\n" +
+                "victim to oil spillage, ocean acidification, waste pollution and overfishing.\n" +
+                "The reef needs you to help restore pride to our landmark and bring back the\n" +
+                "fight that we have fell victim to for a long time now!";
 
-            if(SceneManager.GetActiveScene().name == "Level1")
+
+            if (SceneManager.GetActiveScene().name == "Level1")
             {
-                buttons[0].SetActive(false);
-                buttons[1].SetActive(true);
                 dialogText.text = "You finished the task. Well Done";
             }
         }
@@ -135,7 +111,11 @@ public class CharacterColliders : MonoBehaviour
                 characterImage.sprite = images[1];
                 characterText.text = "Nerio";
 
-                dialogText.text = "Hi! My name is Nerio... Add more";
+                dialogText.text = "Hey KAI! I am Nerio the sea horse, as you can see our reef is in a state\n" +
+                    "of panic and we are counting on you to help save us from turmoil\n" +
+                    "and extinction.\n" +
+                    "This part of the reef is covered in plastic and waste and we need your\n" +
+                    "help to remove it.Watch out for any threats and dangers you might find here.";
             }
             else
             {
@@ -144,6 +124,11 @@ public class CharacterColliders : MonoBehaviour
                 characterImage.sprite = images[1];
                 characterText.text = "Nerio";
                 dialogText.text = "Go find the shrimp first";
+            }
+
+            if (SceneManager.GetActiveScene().name == "Level2")
+            {
+                dialogText.text = "You finished the task. Well Done";
             }
         }
 
@@ -157,7 +142,17 @@ public class CharacterColliders : MonoBehaviour
                 characterImage.sprite = images[2];
                 characterText.text = "Sirius";
 
-                dialogText.text = "Hi! My name is Sirius... Add more";
+                dialogText.text = "KAI! I am glad you are here: \nI am sure Nerio has told you about our reef coming under threat.\n" +
+                    "The sharks have been caught up in plastic packets.\n" +
+                    "We need your help to set them free and remove the toxins.\n " +
+                    "The humans have overdone it and are wreaking havoc amongst the seas,\n" +
+                    "our reefs are no longer landmarks and are covered in trash.\n" +
+                    "We need your help to save and protect it.";
+
+
+
+
+
             }
             else
             {
@@ -170,11 +165,9 @@ public class CharacterColliders : MonoBehaviour
 
             if (SceneManager.GetActiveScene().name == "Level3" && Level3Colour.gameOver)
             {
-                buttons[0].SetActive(false);
-                buttons[1].SetActive(true);
-                dialogText.text = "The reef has been cleaned. Well done";
+                dialogText.text = "Well done on making a start to clean up our ocean.";
             }
-            else if(!Level3Colour.gameOver)
+            else if(!Level3Colour.gameOver && SceneManager.GetActiveScene().name == "Level3")
             {
                 dialogText.text = "You need to cleaen up the reef. Come back when you're done.";
             }

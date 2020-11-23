@@ -15,7 +15,7 @@ public class PlaceCoral : MonoBehaviour
 
     Transform[] fish;
     public List<GameObject> fishList;
-    GameObject[] placeFish = new GameObject[200];
+    GameObject[] placeFish = new GameObject[350];
 
     public LayerMask ground;
     Vector3 groundPos;
@@ -76,7 +76,7 @@ public class PlaceCoral : MonoBehaviour
 
         for (int i = 0; i < placeFish.Length; i++)
         {
-            Vector3 pos = new Vector3(Random.Range(-100, 100), Random.Range(groundPos.y+1, 15), Random.Range(-100, 100));
+            Vector3 pos = new Vector3(Random.Range(-200, 200), Random.Range(groundPos.y+1, 15), Random.Range(-200, 200));
             int index = Random.Range(0, fishList.Count);
             
             placeFish[i] = Instantiate(fishList[index], pos, Quaternion.identity);

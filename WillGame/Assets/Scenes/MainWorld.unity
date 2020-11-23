@@ -1679,10 +1679,45 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 833f7ec144c84c34799d147437cf05ce,
         type: 3}
+    - target: {fileID: 4862312890535786760, guid: 5963fc56eb4bc0e4496fa8be17f2b47e,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4862312890535786760, guid: 5963fc56eb4bc0e4496fa8be17f2b47e,
+        type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4862312890535786760, guid: 5963fc56eb4bc0e4496fa8be17f2b47e,
+        type: 3}
+      propertyPath: m_ReceiveGI
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4862312890535786760, guid: 5963fc56eb4bc0e4496fa8be17f2b47e,
+        type: 3}
+      propertyPath: m_LightProbeUsage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4862312890535786760, guid: 5963fc56eb4bc0e4496fa8be17f2b47e,
+        type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4377e1c8cf3a6b9408085d93c42c2efa, type: 2}
+    - target: {fileID: 4862312890535786760, guid: 5963fc56eb4bc0e4496fa8be17f2b47e,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5e864d61e6deb0c4f9f75a9650240006, type: 2}
     - target: {fileID: 6577139758082952660, guid: 5963fc56eb4bc0e4496fa8be17f2b47e,
         type: 3}
       propertyPath: m_Name
       value: MaronLevel2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6577139758082952660, guid: 5963fc56eb4bc0e4496fa8be17f2b47e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7862695729959337927, guid: 5963fc56eb4bc0e4496fa8be17f2b47e,
         type: 3}

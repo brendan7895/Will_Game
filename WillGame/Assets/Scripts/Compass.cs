@@ -19,6 +19,7 @@ public class Compass : MonoBehaviour
     public CompassMarkers seahorse;
     public CompassMarkers shark;
     public CompassMarkers hali;
+    public CompassMarkers rock;
 
     void Start()
     {
@@ -29,7 +30,11 @@ public class Compass : MonoBehaviour
         {
             AddMarker(maron);
         }
-        if(seahorse!= null)
+        if (rock != null)
+        {
+            AddMarker(rock);
+        }
+        if (seahorse!= null)
         {
             AddMarker(seahorse);
         }

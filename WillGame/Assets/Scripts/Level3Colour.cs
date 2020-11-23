@@ -8,7 +8,8 @@ public class Level3Colour : MonoBehaviour
     public Color[] colour = new Color[5];
     int count = 0;
     int trash = 0;
-    public static bool gameOver = false;
+
+    public static bool gameOver = false; // final game over call
 
     public Image coral;
     public Image flask;
@@ -19,6 +20,8 @@ public class Level3Colour : MonoBehaviour
 
     bool trashCounter = false;
     bool coralCounter = false;
+
+    bool haliSafe = false;  
 
     // Start is called before the first frame update
     void Start()

@@ -15,5 +15,15 @@ public class LookAtPlayer : MonoBehaviour
     void Update()
     {
         gameObject.transform.LookAt(target);
+
+        if(gameObject.tag == "Shrimp")
+        {
+            gameObject.transform.Rotate(-180, 0, 0);
+        }
+
+        if (gameObject.tag == "Seahorse")
+        {
+            gameObject.transform.Rotate(-90, 0, 0);
+        }
     }
 }

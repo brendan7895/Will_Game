@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Fish2
+  - Shrimp
+  - Seahorse
+  - Shark
   layers:
   - Default
   - TransparentFX

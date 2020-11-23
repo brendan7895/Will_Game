@@ -31,9 +31,7 @@ public class PlayerController : MonoBehaviour
     float rotationSpeed = 500;
     bool startRoll = false;
 
-    float rotationSpin = 360;
-    float rotationSpinSpeed = 500;
-    bool startSpin = false;
+    public static bool playerMovement = true;
 
     ////float speed = 15;
     //float turnSmoothTime = 0.1f;
@@ -75,10 +73,12 @@ public class PlayerController : MonoBehaviour
 
         rollInput = Mathf.Lerp(rollInput, Input.GetAxisRaw("Roll"), rollAcceleration * Time.deltaTime);
 
-        
-
-        transform.Rotate(-mouseDistance.y * lookRotateSpeed
+        if (playerMovement)
+        {
+            transform.Rotate(-mouseDistance.y * lookRotateSpeed
             * Time.deltaTime, Mathf.Clamp(mouseDistance.x, -45, 45) * lookRotateSpeed * Time.deltaTime, rollInput * rollSpeed * Time.deltaTime, Space.Self);
+        }
+        
 
         //transform.Rotate(-mouseDistance.y * lookRotateSpeed
         //    * Time.deltaTime, mouseDistance.x * lookRotateSpeed * Time.deltaTime, rollInput * rollSpeed * Time.deltaTime, Space.Self);
@@ -159,29 +159,6 @@ public class PlayerController : MonoBehaviour
        
     }
 
-    void Spin()
-    {
-        float rotation = rotationSpinSpeed * Time.deltaTime;
-        if (rotationSpin > rotation)
-        {
-            rotationSpin -= rotation;
-        }
-        else
-        {
-            rotation = rotationSpin;
-            rotationSpin = 0;
-
-            //sets the camera parent to the game object
-            //Camera.main.transform.SetParent(this.transform);
-
-            startSpin = false;
-            rotationSpin = 360;
-        }
-        transform.Rotate(0, rotation, 0);
-
-        //rotates the camera the oppisite way around its own axis not the parent
-        //Camera.main.transform.Rotate(0, 0, -rotation);
-
-    }
+    
 
 }

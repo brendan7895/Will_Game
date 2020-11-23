@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CharacterColliders : MonoBehaviour
 {
@@ -16,6 +17,10 @@ public class CharacterColliders : MonoBehaviour
 
     public GameObject[] buttons = new GameObject[2];
 
+    public static bool level1complete = false;
+    public static bool level2complete = false;
+    //bool level3complete = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +30,8 @@ public class CharacterColliders : MonoBehaviour
 
         button.onClick.AddListener(ButtonClick);
         startButton.onClick.AddListener(StartButtonClick);
+
+        PlayerController.playerMovement = true;
     }
 
     // Update is called once per frame
@@ -37,7 +44,7 @@ public class CharacterColliders : MonoBehaviour
 
         if (characterText.text == "Maron")
         {
-            dialogText.text = "Add dialog and load scene";
+            dialogText.text = "Come find me when you're done.";
         }
         if (characterText.text == "Nerio")
         {
@@ -54,9 +61,18 @@ public class CharacterColliders : MonoBehaviour
 
     void StartButtonClick()
     {
-        Debug.LogError("Add code to change to other scenes");
+        //Debug.LogError("Add code to change to other scenes");
 
-       
+        if(characterText.text == "Maron" && SceneManager.GetActiveScene().name == "MainWorld")
+        {
+            SceneManager.LoadScene("Level1");
+        }
+        if (characterText.text == "Maron" && SceneManager.GetActiveScene().name == "Level1")
+        {
+            level1complete = true;
+            SceneManager.LoadScene("MainWorld");
+        }
+
     }
 
     void OnTriggerEnter(Collider col)
@@ -73,29 +89,59 @@ public class CharacterColliders : MonoBehaviour
             characterText.text = "Maron";
 
             dialogText.text = "Hi! My name is Maron... Add more";
+
+            if(SceneManager.GetActiveScene().name == "Level1")
+            {
+                buttons[0].SetActive(false);
+                buttons[1].SetActive(true);
+                dialogText.text = "You finished the task. Well Done";
+            }
         }
 
         if (col.tag == "Seahorse")
         {
-            col.transform.LookAt(gameObject.transform.position);
-            Debug.Log("Seahorse");
-            PlayerController.playerMovement = false;
-            canvas.SetActive(true);
-            characterImage.sprite = images[1];
-            characterText.text = "Nerio";
+            if (level1complete)
+            {
+                //col.transform.LookAt(gameObject.transform.position);
+                Debug.Log("Seahorse");
+                PlayerController.playerMovement = false;
+                canvas.SetActive(true);
+                characterImage.sprite = images[1];
+                characterText.text = "Nerio";
 
-            dialogText.text = "Hi! My name is Nerio... Add more";
+                dialogText.text = "Hi! My name is Nerio... Add more";
+            }
+            else
+            {
+                PlayerController.playerMovement = false;
+                canvas.SetActive(true);
+                characterImage.sprite = images[1];
+                characterText.text = "Nerio";
+                dialogText.text = "Go find the shrimp first";
+            }
         }
 
         if (col.tag == "Shark")
         {
-            Debug.Log("Shark");
-            PlayerController.playerMovement = false;
-            canvas.SetActive(true);
-            characterImage.sprite = images[2];
-            characterText.text = "Sirius";
+            if (level2complete)
+            {
+                Debug.Log("Shark");
+                PlayerController.playerMovement = false;
+                canvas.SetActive(true);
+                characterImage.sprite = images[2];
+                characterText.text = "Sirius";
 
-            dialogText.text = "Hi! My name is Sirius... Add more";
+                dialogText.text = "Hi! My name is Sirius... Add more";
+            }
+            else
+            {
+                PlayerController.playerMovement = false;
+                canvas.SetActive(true);
+                characterImage.sprite = images[2];
+                characterText.text = "Sirius";
+                dialogText.text = "Go find the seahorse";
+            }
+           
         }
 
     }

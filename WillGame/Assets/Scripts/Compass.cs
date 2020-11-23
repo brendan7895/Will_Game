@@ -24,8 +24,13 @@ public class Compass : MonoBehaviour
         compassUnit = compassImage.rectTransform.rect.width / 360f;
 
         AddMarker(maron);
-        AddMarker(seahorse);
-        AddMarker(shark);
+
+        if(seahorse!= null)
+        {
+            AddMarker(seahorse);
+            AddMarker(shark);
+        }
+        
     }
 
     // Update is called once per frame

@@ -49,6 +49,7 @@ public class CharacterColliders : MonoBehaviour
 
         if (characterText.text == "Nerio" && SceneManager.GetActiveScene().name == "MainWorld")
         {
+            Debug.Log("rjog;wregw");
             SceneManager.LoadScene("Level2");
         }
         if (characterText.text == "Nerio" && SceneManager.GetActiveScene().name == "Level2")

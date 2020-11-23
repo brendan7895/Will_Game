@@ -724,6 +724,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 494022606}
   m_CullTransparentMesh: 0
+--- !u!1 &705986987
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 705986988}
+  m_Layer: 0
+  m_Name: PushTest
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &705986988
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705986987}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -60.139297, y: 7.416316, z: 79.9942}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &729075779
 GameObject:
   m_ObjectHideFlags: 0
@@ -1191,10 +1221,6 @@ MonoBehaviour:
   characterText: {fileID: 405346335}
   dialogText: {fileID: 216860272}
   button: {fileID: 1797845034}
-  startButton: {fileID: 772098248}
-  buttons:
-  - {fileID: 1797845032}
-  - {fileID: 772098246}
 --- !u!114 &1001891761
 MonoBehaviour:
   m_ObjectHideFlags: 0

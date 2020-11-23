@@ -232,7 +232,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 219.3}
+  m_AnchoredPosition: {x: 0, y: 188.16}
   m_SizeDelta: {x: 1399.6, y: 264}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &218175834
@@ -255,7 +255,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: f6fb6608368ff7f4fa12d5ddede80527, type: 3}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 55
     m_FontStyle: 1
     m_BestFit: 0
@@ -266,8 +266,8 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 1. Press the left mouse button when near a shark or scuba diver to kill/or
+    m_LineSpacing: 1.36
+  m_Text: Press the left mouse button when near a shark or scuba diver to kill/or
     scare off the enemy character
 --- !u!222 &218175835
 CanvasRenderer:
@@ -372,7 +372,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &232575422
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2028,7 +2028,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 219.3}
+  m_AnchoredPosition: {x: 0, y: 189}
   m_SizeDelta: {x: 1399.6, y: 264}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1048516880
@@ -2051,7 +2051,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: f6fb6608368ff7f4fa12d5ddede80527, type: 3}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 55
     m_FontStyle: 1
     m_BestFit: 0
@@ -2062,9 +2062,9 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 1. interacting is used to communicate with other characters. press the
-    I Key when close to a character
+    m_LineSpacing: 1.36
+  m_Text: Interacting is used to communicate with other characters. Press the "I"
+    Key when close to a character
 --- !u!222 &1048516881
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2130,9 +2130,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: f6fb6608368ff7f4fa12d5ddede80527, type: 3}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 43
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 134
@@ -2141,10 +2141,10 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
-    m_LineSpacing: 1
-  m_Text: "welcome to the great barrier reef and having seen the state marine wildlife
+    m_LineSpacing: 1.36
+  m_Text: "Welcome to the great barrier reef and having seen the state marine wildlife
     has been effected by pollution it is up to you to help save your friends from
-    this devastating impact. Its all in your hands to be the light in the dark adversity
+    this devastating impact. It's all in your hands to be the light in the dark adversity
     and save the reef from being another victim of marine destruction. Don\u2019t
     be afraid, be bold and stand up and help make the change to save the marine life
     for the future of our generation. "
@@ -2292,7 +2292,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1171206059
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2400,7 +2400,11 @@ MonoBehaviour:
   - {fileID: 2083027848882005502, guid: 940ec8abcddac3940b11f423521ec2cf, type: 3}
   - {fileID: 3746667546654535524, guid: 4c4df5e5ec1e2cf45afdb5f036a88535, type: 3}
   - {fileID: 4788410442741086899, guid: d005574bd6e403044a6b953235a52342, type: 3}
+  fishType:
+  - {fileID: 4461077462459474816, guid: 66b0a34b03c14f04783c6877b6f4c875, type: 3}
+  - {fileID: 6189032914530365145, guid: 58f78b95282e2394ea416b988c7b24a6, type: 3}
   corals: []
+  fishList: []
   ground:
     serializedVersion: 2
     m_Bits: 256
@@ -3181,7 +3185,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 241.66}
+  m_AnchoredPosition: {x: 0, y: 209.5}
   m_SizeDelta: {x: 1346.8, y: 217.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1793063273
@@ -3204,7 +3208,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: f6fb6608368ff7f4fa12d5ddede80527, type: 3}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 55
     m_FontStyle: 1
     m_BestFit: 0
@@ -3215,8 +3219,8 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 1. Dodging is used to avoid fishing line and other hazardous objects. use
+    m_LineSpacing: 1.36
+  m_Text: Dodging is used to avoid fishing line and other hazardous objects. Use
     the tab button to try it out
 --- !u!222 &1793063274
 CanvasRenderer:
@@ -3260,7 +3264,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 219.3}
+  m_AnchoredPosition: {x: 0, y: 197.76}
   m_SizeDelta: {x: 1399.6, y: 264}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1813650205
@@ -3283,7 +3287,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: f6fb6608368ff7f4fa12d5ddede80527, type: 3}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 55
     m_FontStyle: 1
     m_BestFit: 0
@@ -3294,8 +3298,8 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 1. Hold down the shift key to temporarily increase the speed of your character
+    m_LineSpacing: 1.36
+  m_Text: Hold down the shift key to temporarily increase the speed of your character
 --- !u!222 &1813650206
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3654,7 +3658,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 184.2}
+  m_AnchoredPosition: {x: 0, y: 147}
   m_SizeDelta: {x: 1346.8, y: 217.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2145825805
@@ -3677,7 +3681,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: f6fb6608368ff7f4fa12d5ddede80527, type: 3}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 55
     m_FontStyle: 1
     m_BestFit: 0
@@ -3688,8 +3692,8 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 1. movement is controlled by the wasd keys and the direction is controlled
+    m_LineSpacing: 1.36
+  m_Text: Movement is controlled by the WASD keys and the direction is controlled
     by the mouse
 --- !u!222 &2145825806
 CanvasRenderer:

@@ -1509,9 +1509,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4bdc1583a21a8843a4cc38ee0dbbf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mapCanvas: {fileID: 1337669240}
-  countCanvas: {fileID: 1822355689}
-  gameOverCanvas: {fileID: 1542097003}
+  mapCanvas: {fileID: 0}
+  countCanvas: {fileID: 0}
+  gameOverCanvas: {fileID: 0}
   colour:
   - {r: 0.54425746, g: 0.40392157, b: 0.95, a: 0}
   - {r: 0.9056604, g: 0.36495417, b: 0.089711644, a: 0}
@@ -1520,7 +1520,7 @@ MonoBehaviour:
   - {r: 0.9811321, g: 0.85392874, b: 0.46742615, a: 0}
   coral: {fileID: 1423207718}
   flask: {fileID: 1369437964}
-  rockImg: {fileID: 616929524}
+  rockImg: {fileID: 0}
   done: {fileID: 21300000, guid: 196e1dbaeb85fea4fb70bdc30b8ab81d, type: 3}
   counter: {fileID: 494022608}
 --- !u!135 &1001891766

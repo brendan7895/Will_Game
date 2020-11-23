@@ -52,7 +52,8 @@ public class CharacterColliders : MonoBehaviour
         }
         if (characterText.text == "Sirius")
         {
-            dialogText.text = "Add dialog and load scene";
+            canvas.SetActive(false);
+            //dialogText.text = "Add dialog and load scene";
         }
 
         buttons[0].SetActive(false);
@@ -88,10 +89,14 @@ public class CharacterColliders : MonoBehaviour
         {
             SceneManager.LoadScene("Level3");
         }
-        if (characterText.text == "Sirius" && SceneManager.GetActiveScene().name == "Level3")
+        if (characterText.text == "Sirius" && SceneManager.GetActiveScene().name == "Level3" && Level3Colour.gameOver)
         {
             level3complete = true;
             SceneManager.LoadScene("MainWorld");
+        }
+        else
+        {
+            canvas.SetActive(false);
         }
 
     }
@@ -163,11 +168,15 @@ public class CharacterColliders : MonoBehaviour
                 dialogText.text = "Go find the seahorse";
             }
 
-            if (SceneManager.GetActiveScene().name == "Level3")
+            if (SceneManager.GetActiveScene().name == "Level3" && Level3Colour.gameOver)
             {
                 buttons[0].SetActive(false);
                 buttons[1].SetActive(true);
                 dialogText.text = "The reef has been cleaned. Well done";
+            }
+            else if(!Level3Colour.gameOver)
+            {
+                dialogText.text = "You need to cleaen up the reef. Come back when you're done.";
             }
 
         }

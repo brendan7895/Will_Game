@@ -9,6 +9,7 @@ TagManager:
   - Seahorse
   - Shark
   - Coral
+  - Trash
   layers:
   - Default
   - TransparentFX

@@ -40,6 +40,7 @@ public class PlaceCoral : MonoBehaviour
 
         for (int i = 0; i < placeCoral.Length; i++)
         {
+            
             Vector3 pos = new Vector3(Random.Range(-100, 100), 4.1f, Random.Range(-100, 100));
             int index = Random.Range(0, corals.Count);
             placeCoral[i] = Instantiate(corals[index], pos, corals[index].transform.rotation);

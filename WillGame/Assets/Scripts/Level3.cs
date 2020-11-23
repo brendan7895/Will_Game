@@ -19,6 +19,7 @@ public class Level3 : MonoBehaviour
 
         Time.timeScale = 1;
 
+
         btnUnpause.onClick.AddListener(Unpause);
         btnLevelMenu.onClick.AddListener(LevelSelect);
         btnMainMenu.onClick.AddListener(MainMenu);

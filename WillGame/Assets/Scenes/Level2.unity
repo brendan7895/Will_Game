@@ -1214,6 +1214,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Menu
       objectReference: {fileID: 0}
+    - target: {fileID: 9051276537847674213, guid: 9d2f96bc4bc95164fa07f24863b7ffab,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 334.93
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d2f96bc4bc95164fa07f24863b7ffab, type: 3}
 --- !u!1001 &1166518746

@@ -18,6 +18,7 @@ public class Compass : MonoBehaviour
     public CompassMarkers maron;
     public CompassMarkers seahorse;
     public CompassMarkers shark;
+    public CompassMarkers hali;
 
     void Start()
     {
@@ -36,7 +37,12 @@ public class Compass : MonoBehaviour
         {
             AddMarker(shark);
         }
-        
+
+        if (hali != null)
+        {
+            AddMarker(hali);
+        }
+
     }
 
     // Update is called once per frame

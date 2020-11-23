@@ -968,7 +968,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -30}
+  m_AnchoredPosition: {x: 0, y: -50}
   m_SizeDelta: {x: 1500, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &984274693
@@ -991,6 +991,7 @@ MonoBehaviour:
   maron: {fileID: 0}
   seahorse: {fileID: 637826878}
   shark: {fileID: 0}
+  hali: {fileID: 0}
 --- !u!114 &984274694
 MonoBehaviour:
   m_ObjectHideFlags: 0

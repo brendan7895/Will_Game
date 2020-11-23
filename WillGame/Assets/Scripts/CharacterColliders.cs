@@ -112,6 +112,8 @@ public class CharacterColliders : MonoBehaviour
                 characterImage.sprite = images[1];
                 characterText.text = "Nerio";
 
+                //button.enabled = false;
+
                 dialogText.text = "Hey KAI! I am Nerio the sea horse, as you can see our reef is in a state\n" +
                     "of panic and we are counting on you to help save us from turmoil\n" +
                     "and extinction.\n" +
@@ -143,6 +145,8 @@ public class CharacterColliders : MonoBehaviour
                 characterImage.sprite = images[2];
                 characterText.text = "Sirius";
 
+                button.enabled = false;
+
                 dialogText.text = "KAI! I am glad you are here: \nI am sure Nerio has told you about our reef coming under threat.\n" +
                     "The sharks have been caught up in plastic packets.\n" +
                     "We need your help to set them free and remove the toxins.\n " +
@@ -150,9 +154,7 @@ public class CharacterColliders : MonoBehaviour
                     "our reefs are no longer landmarks and are covered in trash.\n" +
                     "We need your help to save and protect it.";
 
-
-
-
+                StartCoroutine(Wait());
 
             }
             else
@@ -181,5 +183,14 @@ public class CharacterColliders : MonoBehaviour
     {
         PlayerController.playerMovement = true;
         canvas.SetActive(false);
+    }
+
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(15);
+        dialogText.text = "We need you to colour in 20 pieces of coral by appraoching the coral \nand clicking on it,\n" +
+            "we need you to clear 15 pieces of trash.\n" +
+            "Finally we need you to clear the rocks and trash around Hali to save her";
+        button.enabled = true;
     }
 }

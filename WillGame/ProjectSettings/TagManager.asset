@@ -10,6 +10,7 @@ TagManager:
   - Shark
   - Coral
   - Trash
+  - Boulders
   layers:
   - Default
   - TransparentFX

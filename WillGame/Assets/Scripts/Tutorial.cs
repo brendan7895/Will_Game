@@ -30,7 +30,7 @@ public class Tutorial : MonoBehaviour
     private bool boostComplete = false;
     private bool attackComplete = false;
 
-    private float dist;
+    private float dist = 0;
 
     // Start is called before the first frame update
     void Start()

@@ -2814,6 +2814,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88280f7f72aaabd41a2e2927d8d77750, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
 --- !u!1001 &2601443794067291840
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2883,6 +2884,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60655be0d22cbed498dd279b55651bbc, type: 3}
+=======
+>>>>>>> parent of 1350833... Added a couple fixes
 --- !u!1001 &3650356325696239574
 PrefabInstance:
   m_ObjectHideFlags: 0

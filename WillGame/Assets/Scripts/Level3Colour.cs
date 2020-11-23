@@ -30,8 +30,11 @@ public class Level3Colour : MonoBehaviour
     bool coralCounter = false;
     bool rockCounter = false;
 
+<<<<<<< HEAD
      
 
+=======
+>>>>>>> parent of 1350833... Added a couple fixes
     // Start is called before the first frame update
     void Start()
     {

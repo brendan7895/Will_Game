@@ -6,19 +6,68 @@ using UnityEngine.UI;
 public class CharacterColliders : MonoBehaviour
 {
     public GameObject canvas;
-    public Image characterImage;
+    public Image characterImage; //sprite for character
     public Sprite[] images = new Sprite[3];
-    public Text characterText;
+    public Text characterText; //character name
+    public Text dialogText; //dialog text in main box
+
+    public Button button;
+    public Button startButton;
+
+    public GameObject[] buttons = new GameObject[2];
 
     // Start is called before the first frame update
     void Start()
     {
         canvas.SetActive(false);
+        buttons[0].SetActive(true);
+        buttons[1].SetActive(false);
+
+        button.onClick.AddListener(ButtonClick);
+        startButton.onClick.AddListener(StartButtonClick);
     }
 
     // Update is called once per frame
     void Update()
     {
+    }
+
+    void ButtonClick()
+    {
+        
+        if(characterText.text == "Maron")
+        {
+            dialogText.text = "Add dialog";
+        }
+        if (characterText.text == "Nerio")
+        {
+            dialogText.text = "Add dialog";
+        }
+        if (characterText.text == "Sirius")
+        {
+            dialogText.text = "Add dialog";
+        }
+
+        buttons[0].SetActive(false);
+        buttons[1].SetActive(true);
+    }
+
+    void StartButtonClick()
+    {
+        Debug.LogError("Add code to change to other scenes");
+
+        if (characterText.text == "Maron")
+        {
+            dialogText.text = "Add dialog and load scene";
+        }
+        if (characterText.text == "Nerio")
+        {
+            dialogText.text = "Add dialog and load scene";
+        }
+        if (characterText.text == "Sirius")
+        {
+            dialogText.text = "Add dialog and load scene";
+        }
     }
 
     void OnTriggerEnter(Collider col)
@@ -32,6 +81,8 @@ public class CharacterColliders : MonoBehaviour
             canvas.SetActive(true);
             characterImage.sprite = images[0];
             characterText.text = "Maron";
+
+            dialogText.text = "Hi! My name is Maron...";
         }
 
         if (col.tag == "Seahorse")
@@ -42,6 +93,8 @@ public class CharacterColliders : MonoBehaviour
             canvas.SetActive(true);
             characterImage.sprite = images[1];
             characterText.text = "Nerio";
+
+            dialogText.text = "Hi! My name is Nerio...";
         }
 
         if (col.tag == "Shark")
@@ -51,6 +104,8 @@ public class CharacterColliders : MonoBehaviour
             canvas.SetActive(true);
             characterImage.sprite = images[2];
             characterText.text = "Sirius";
+
+            dialogText.text = "Hi! My name is Sirius...";
         }
     }
 

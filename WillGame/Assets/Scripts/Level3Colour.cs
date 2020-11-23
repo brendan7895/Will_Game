@@ -5,22 +5,14 @@ public class Level3Colour : MonoBehaviour
 {
     GameObject g;
     GameObject trashPiece;
-    GameObject boulderPieces;
-
-    public GameObject mapCanvas;
-    public GameObject countCanvas;
-    public GameObject gameOverCanvas;
-
     public Color[] colour = new Color[5];
     int count = 0;
     int trash = 0;
-    int rock = 0;
 
     public static bool gameOver = false; // final game over call
 
     public Image coral;
     public Image flask;
-    public Image rockImg;
 
     public Sprite done;
 
@@ -28,16 +20,13 @@ public class Level3Colour : MonoBehaviour
 
     bool trashCounter = false;
     bool coralCounter = false;
-    bool rockCounter = false;
 
-     
+    bool haliSafe = false;  
 
     // Start is called before the first frame update
     void Start()
     {
-        mapCanvas.SetActive(true);
-        countCanvas.SetActive(true);
-        gameOverCanvas.SetActive(false);
+
     }
 
     // Update is called once per frame
@@ -47,16 +36,10 @@ public class Level3Colour : MonoBehaviour
         {
             g.GetComponent<Renderer>().material.color = colour[Random.Range(0,4)];
             Destroy(trashPiece);
-            Destroy(boulderPieces);
 
             if (count < 20 && coralCounter)
             {
                 count++;
-            }
-
-            if(rock < 12 && rockCounter)
-            {
-                rock++;
             }
 
             if(trash < 15 && trashCounter)
@@ -74,22 +57,13 @@ public class Level3Colour : MonoBehaviour
                 flask.sprite = done;
             }
 
-            if (rock == 12)
-            {
-                rockImg.sprite = done;
-            }
-
-            if (count == 20 && trash == 15 && rock == 12)
+            if (count == 20 && trash == 15)
             {             
                 gameOver = true;
-                mapCanvas.SetActive(false);
-                countCanvas.SetActive(false);
-                gameOverCanvas.SetActive(true);
             }
-            rockCounter = false;
             coralCounter = false;
             trashCounter = false;
-            counter.text = count + "/20\n" +trash+"/15\n" + rock + "/12";
+            counter.text = count + "/20\n" +trash+"/15";
         }
     }
 
@@ -107,10 +81,6 @@ public class Level3Colour : MonoBehaviour
             trashCounter = true;
             trashPiece = col.gameObject;
             
-        }
-        if(col.tag == "Boulders")
-        {
-            boulderPieces = col.gameObject;
         }
     }
 

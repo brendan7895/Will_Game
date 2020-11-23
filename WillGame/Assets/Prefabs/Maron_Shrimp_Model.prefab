@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1172887144339588593}
   - component: {fileID: 4862312890535786760}
   - component: {fileID: 454910725664338568}
+  - component: {fileID: 7804734387874793037}
   m_Layer: 0
   m_Name: Maron_Shrimp_Model
   m_TagString: Untagged
@@ -97,3 +98,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 0}
   image: {fileID: 0}
+--- !u!95 &7804734387874793037
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6577139758082952660}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0473f18cbbdf74540b0b9921db0d9980, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

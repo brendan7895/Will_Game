@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class Level3Colour : MonoBehaviour
@@ -75,7 +76,8 @@ public class Level3Colour : MonoBehaviour
             if (count == 20 && trash == 15 && rock == 12)
             {             
                 gameOver = true;
-                gameOverImage.SetActive(true);
+                PlayerController.playerMovement = false;
+                
             }
 
             coralCounter = false;
@@ -106,6 +108,11 @@ public class Level3Colour : MonoBehaviour
             rockPiece = col.gameObject;
         }
     }
-
+    
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(5);
+        gameOverImage.SetActive(true);
+    }
     
 }

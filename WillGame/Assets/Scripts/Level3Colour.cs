@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Level3Colour : MonoBehaviour
@@ -9,7 +8,8 @@ public class Level3Colour : MonoBehaviour
     public Color[] colour = new Color[5];
     int count = 0;
     int trash = 0;
-    public static bool gameOver = false;
+
+    public static bool gameOver = false; // final game over call
 
     public Image coral;
     public Image flask;
@@ -21,6 +21,7 @@ public class Level3Colour : MonoBehaviour
     bool trashCounter = false;
     bool coralCounter = false;
 
+    bool haliSafe = false;  
 
     // Start is called before the first frame update
     void Start()
@@ -31,7 +32,6 @@ public class Level3Colour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         if (Input.GetMouseButtonDown(0) && g != null)
         {
             g.GetComponent<Renderer>().material.color = colour[Random.Range(0,4)];
@@ -83,4 +83,6 @@ public class Level3Colour : MonoBehaviour
             
         }
     }
+
+    
 }

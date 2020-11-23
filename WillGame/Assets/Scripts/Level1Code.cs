@@ -5,11 +5,14 @@ using UnityEngine;
 public class Level1Code : MonoBehaviour
 {
     public GameObject parent;
+    public GameObject particle;
+
     GameObject g;
+    
     // Start is called before the first frame update
     void Start()
     {
-
+        particle.SetActive(false);
     }
 
     // Update is called once per frame

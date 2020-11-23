@@ -19,7 +19,7 @@ public class CharacterColliders : MonoBehaviour
 
     public static bool level1complete = false;
     public static bool level2complete = false;
-    //bool level3complete = false;
+    public static bool level3complete = false;
 
     // Start is called before the first frame update
     void Start()
@@ -70,6 +70,27 @@ public class CharacterColliders : MonoBehaviour
         if (characterText.text == "Maron" && SceneManager.GetActiveScene().name == "Level1")
         {
             level1complete = true;
+            SceneManager.LoadScene("MainWorld");
+        }
+
+        if (characterText.text == "Nerio" && SceneManager.GetActiveScene().name == "MainWorld")
+        {
+            SceneManager.LoadScene("Level2");
+        }
+        if (characterText.text == "Nerio" && SceneManager.GetActiveScene().name == "Level2")
+        {
+            level2complete = true;
+            SceneManager.LoadScene("MainWorld");
+        }
+
+
+        if (characterText.text == "Sirius" && SceneManager.GetActiveScene().name == "MainWorld")
+        {
+            SceneManager.LoadScene("Level3");
+        }
+        if (characterText.text == "Sirius" && SceneManager.GetActiveScene().name == "Level3")
+        {
+            level3complete = true;
             SceneManager.LoadScene("MainWorld");
         }
 
@@ -141,7 +162,14 @@ public class CharacterColliders : MonoBehaviour
                 characterText.text = "Sirius";
                 dialogText.text = "Go find the seahorse";
             }
-           
+
+            if (SceneManager.GetActiveScene().name == "Level3")
+            {
+                buttons[0].SetActive(false);
+                buttons[1].SetActive(true);
+                dialogText.text = "The reef has been cleaned. Well done";
+            }
+
         }
 
     }

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7471121807759211202}
   m_Layer: 9
   m_Name: Shell
-  m_TagString: Untagged
+  m_TagString: Coral
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 8959052647111821953}
   m_Layer: 9
   m_Name: Rock
-  m_TagString: Untagged
+  m_TagString: Coral
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -171,7 +171,7 @@ GameObject:
   - component: {fileID: 1886971884504670244}
   m_Layer: 9
   m_Name: Tall_Twiste_Coral
-  m_TagString: Untagged
+  m_TagString: Coral
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -250,7 +250,7 @@ GameObject:
   - component: {fileID: 8680266514062468580}
   m_Layer: 9
   m_Name: Tube_Coral_2
-  m_TagString: Untagged
+  m_TagString: Coral
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -329,7 +329,7 @@ GameObject:
   - component: {fileID: 7336340894527592975}
   m_Layer: 9
   m_Name: Fan_Coral
-  m_TagString: Untagged
+  m_TagString: Coral
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -408,7 +408,7 @@ GameObject:
   - component: {fileID: 8780244598137300618}
   m_Layer: 9
   m_Name: Rock_with_Coral_2
-  m_TagString: Untagged
+  m_TagString: Coral
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -487,7 +487,7 @@ GameObject:
   - component: {fileID: 8043410467818129037}
   m_Layer: 9
   m_Name: Rock_with_Coral_3
-  m_TagString: Untagged
+  m_TagString: Coral
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -566,7 +566,7 @@ GameObject:
   - component: {fileID: 8870761670436442370}
   m_Layer: 9
   m_Name: Coral_Tree_1
-  m_TagString: Untagged
+  m_TagString: Coral
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -645,7 +645,7 @@ GameObject:
   - component: {fileID: 7423014281985649285}
   m_Layer: 9
   m_Name: Tube_Coral_4
-  m_TagString: Untagged
+  m_TagString: Coral
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -724,7 +724,7 @@ GameObject:
   - component: {fileID: 6043827786381028481}
   m_Layer: 9
   m_Name: Rock_with_Coral_1
-  m_TagString: Untagged
+  m_TagString: Coral
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -803,7 +803,7 @@ GameObject:
   - component: {fileID: 2821634008296609901}
   m_Layer: 9
   m_Name: Tube_Coral_3
-  m_TagString: Untagged
+  m_TagString: Coral
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -882,7 +882,7 @@ GameObject:
   - component: {fileID: 2516867159246797625}
   m_Layer: 9
   m_Name: Coral_tree_2
-  m_TagString: Untagged
+  m_TagString: Coral
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -961,7 +961,7 @@ GameObject:
   - component: {fileID: 4569378277344062924}
   m_Layer: 9
   m_Name: Tube_Coral_1
-  m_TagString: Untagged
+  m_TagString: Coral
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1084,7 +1084,7 @@ GameObject:
   - component: {fileID: 485816295939849899}
   m_Layer: 9
   m_Name: Tall_Coral
-  m_TagString: Untagged
+  m_TagString: Coral
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

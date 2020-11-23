@@ -23,11 +23,17 @@ public class Compass : MonoBehaviour
     {
         compassUnit = compassImage.rectTransform.rect.width / 360f;
 
-        AddMarker(maron);
-
+        
+        if(maron!= null)
+        {
+            AddMarker(maron);
+        }
         if(seahorse!= null)
         {
             AddMarker(seahorse);
+        }
+        if (shark != null)
+        {
             AddMarker(shark);
         }
         

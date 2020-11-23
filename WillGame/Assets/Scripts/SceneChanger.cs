@@ -38,7 +38,6 @@ public class SceneChanger : MonoBehaviour
             buttons[1].onClick.AddListener(() => { LoadLevel(1); });
             buttons[2].onClick.AddListener(() => { LoadLevel(2); });
             buttons[3].onClick.AddListener(() => { LoadLevel(3); });
-            buttons[4].onClick.AddListener(() => { LoadLevel(4); });
         }
     }
 
@@ -68,18 +67,17 @@ public class SceneChanger : MonoBehaviour
         {
             case 1:
                 Debug.Log("Load Level 1");
+                SceneManager.LoadScene("Level1");
                 break;
 
             case 2:
                 Debug.Log("Load Level 2");
+                SceneManager.LoadScene("Level2");
                 break;
 
             case 3:
                 Debug.Log("Load Level 3");
-                break;
-
-            case 4:
-                Debug.Log("Load Level 4");
+                SceneManager.LoadScene("Level3");
                 break;
         }
         

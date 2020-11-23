@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Tutorial : MonoBehaviour
@@ -12,6 +13,7 @@ public class Tutorial : MonoBehaviour
     public GameObject boost;
     public GameObject attack;
     public GameObject tutorialDone;
+    public GameObject paused;
 
     public GameObject player;
     public GameObject character;
@@ -23,6 +25,9 @@ public class Tutorial : MonoBehaviour
     public Button btnCloseBoost;
     public Button btnCloseAttack;
     public Button btnCloseTutorial;
+    public Button btnUnpause;
+    public Button btnLevelMenu;
+    public Button btnMainMenu;
 
     private bool movementComplete = false;
     private bool dodgeComplete = false;
@@ -43,6 +48,7 @@ public class Tutorial : MonoBehaviour
         attack.SetActive(false);
         shark.SetActive(false);
         tutorialDone.SetActive(false);
+        paused.SetActive(false);
 
         movementComplete = false;
 
@@ -54,6 +60,9 @@ public class Tutorial : MonoBehaviour
         btnCloseBoost.onClick.AddListener(CloseBoost);
         btnCloseAttack.onClick.AddListener(CloseAttack);
         btnCloseTutorial.onClick.AddListener(CloseTutorial);
+        btnUnpause.onClick.AddListener(Unpause);
+        btnLevelMenu.onClick.AddListener(LevelSelect);
+        btnMainMenu.onClick.AddListener(MainMenu);
 
         dist = 0f;
     }
@@ -61,6 +70,11 @@ public class Tutorial : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            Pause();
+        }
+
         if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D))
         {
             if(movementComplete == false)
@@ -148,6 +162,33 @@ public class Tutorial : MonoBehaviour
     {
         tutorialDone.SetActive(false);
         Time.timeScale = 1;
+
+        Debug.Log("Load Level 1");
+        SceneManager.LoadScene("Level1");
+    }
+
+    public void Pause()
+    {
+        Time.timeScale = 0;
+        paused.SetActive(true);
+    }
+
+    public void Unpause()
+    {
+        Time.timeScale = 1;
+        paused.SetActive(false);
+    }
+
+    public void LevelSelect()
+    {
+        Debug.Log("Load Level Menu");
+        SceneManager.LoadScene("Levels");
+    }
+
+    public void MainMenu()
+    {
+        Debug.Log("Load Main Menu");
+        SceneManager.LoadScene("StartMenu");
     }
 
     IEnumerator MovementDone()

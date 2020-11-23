@@ -32,6 +32,10 @@ public class Level1Code : MonoBehaviour
                 {
                     Debug.Log("It's working!");
                     hitInfo.transform.SetParent(parent.transform);
+                    if (hitInfo.transform.name == "GeoSphere003 (17)")
+                    {
+                        particle.SetActive(true);
+                    }
                 }
                 else
                 {

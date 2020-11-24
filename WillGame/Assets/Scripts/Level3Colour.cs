@@ -77,7 +77,7 @@ public class Level3Colour : MonoBehaviour
             {             
                 gameOver = true;
                 PlayerController.playerMovement = false;
-                gameOverImage.SetActive(true);
+                StartCoroutine(WaitGameOver());
             }
 
             coralCounter = false;
@@ -85,6 +85,12 @@ public class Level3Colour : MonoBehaviour
             rockCounter = false;
             counter.text = count + "/20\n" +trash+"/15\n" + rock + "/12";
         }
+    }
+
+    IEnumerator WaitGameOver()
+    {
+        yield return new WaitForSeconds(4);
+        gameOverImage.SetActive(true);
     }
 
     void OnTriggerEnter(Collider col)

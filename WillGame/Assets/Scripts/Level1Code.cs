@@ -6,6 +6,7 @@ public class Level1Code : MonoBehaviour
 {
     public GameObject parent;
     public GameObject particle;
+    GameObject trashPiece;
 
     GameObject g;
     
@@ -21,6 +22,7 @@ public class Level1Code : MonoBehaviour
         RaycastHit hitInfo = new RaycastHit();
         if (Input.GetMouseButtonDown(0))
         {
+            Destroy(trashPiece);
             Debug.Log("Mouse is down");
 
             
@@ -39,7 +41,7 @@ public class Level1Code : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("nopz");
+                    Debug.Log("no hit");
                 }
             }
             else
@@ -57,11 +59,13 @@ public class Level1Code : MonoBehaviour
         }
     }
 
-    //void OnTriggerEnter(Collider col)
-    //{
-    //    if (col.tag == "Boulder")
-    //    {
-    //        col.transform.SetParent(gameObject.transform);
-    //    }
-    //}
+    void OnTriggerEnter(Collider col)
+    {
+
+        if (col.tag == "Trash")
+        {
+            trashPiece = col.gameObject;
+        }
+
+    }
 }

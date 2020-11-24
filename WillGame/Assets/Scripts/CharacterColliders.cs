@@ -88,6 +88,8 @@ public class CharacterColliders : MonoBehaviour
             characterImage.sprite = images[0];
             characterText.text = "Maron";
 
+            button.enabled = false;
+
             dialogText.text = "HEY KAI! we are in trouble and we need your help!\n" +
                 "The reef has come under threat.Our habitats and sea friends have fallen\n" +
                 "victim to oil spillage, ocean acidification, waste pollution and overfishing.\n" +
@@ -191,6 +193,14 @@ public class CharacterColliders : MonoBehaviour
         dialogText.text = "We need you to colour in 20 pieces of coral by appraoching the coral \nand clicking on it,\n" +
             "we need you to clear 15 pieces of trash.\n" +
             "Finally we need you to clear the rocks and trash around Hali to save her";
+        button.enabled = true;
+    }
+
+    IEnumerator Level1Wait()
+    {
+        yield return new WaitForSeconds(15);
+        dialogText.text = "We need you to find the boulders and move them to get the water moving again\n" +
+            "While you are looking for this try clicking on floating plastic to destroy it";
         button.enabled = true;
     }
 }

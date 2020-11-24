@@ -88,13 +88,15 @@ public class CharacterColliders : MonoBehaviour
             characterImage.sprite = images[0];
             characterText.text = "Maron";
 
-            button.enabled = false;
+            //button.enabled = false;
 
             dialogText.text = "HEY KAI! we are in trouble and we need your help!\n" +
                 "The reef has come under threat.Our habitats and sea friends have fallen\n" +
                 "victim to oil spillage, ocean acidification, waste pollution and overfishing.\n" +
                 "The reef needs you to help restore pride to our landmark and bring back the\n" +
                 "fight that we have fell victim to for a long time now!";
+
+            StartCoroutine(Level1Wait());
 
 
             if (SceneManager.GetActiveScene().name == "Level1")
@@ -147,7 +149,7 @@ public class CharacterColliders : MonoBehaviour
                 characterImage.sprite = images[2];
                 characterText.text = "Sirius";
 
-                button.enabled = false;
+                //button.enabled = false;
 
                 dialogText.text = "KAI! I am glad you are here: \nI am sure Nerio has told you about our reef coming under threat.\n" +
                     "The sharks have been caught up in plastic packets.\n" +

@@ -18,6 +18,10 @@ public class CharacterColliders : MonoBehaviour
     public static bool level2complete = false;
     public static bool level3complete = false;
 
+    public static bool foundEverything = false;
+
+    private bool meetSirius = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -54,7 +58,14 @@ public class CharacterColliders : MonoBehaviour
         }
         if (characterText.text == "Nerio" && SceneManager.GetActiveScene().name == "Level2")
         {
-            level2complete = true;
+            meetSirius = true;
+            Level2.levelCounter.SetActive(true);
+            Level2.nerioBrother.SetActive(true);
+            //level2complete = true;
+            //SceneManager.LoadScene("MainWorld");
+        }
+        if (characterText.text == "Nerio" && SceneManager.GetActiveScene().name == "Level2" && level2complete == true)
+        {
             SceneManager.LoadScene("MainWorld");
         }
 
@@ -133,9 +144,36 @@ public class CharacterColliders : MonoBehaviour
                 dialogText.text = "Go find the shrimp first";
             }
 
-            if (SceneManager.GetActiveScene().name == "Level2")
+            if (SceneManager.GetActiveScene().name == "Level2" && meetSirius == false)
             {
-                dialogText.text = "You finished the task. Well Done";
+                dialogText.text = "KAI, we need your help! I can't find my little brother anywhere. \n" +
+                    "We need you to find my brother and block up these pipes. Swim over \nthe opening's to stop" +
+                    " the escaping gas from being released.";
+                
+            }
+            if(SceneManager.GetActiveScene().name == "Level2" && meetSirius == true)
+            {
+                dialogText.text = "Come back when you've completed the task.";
+            }
+            if (SceneManager.GetActiveScene().name == "Level2" && meetSirius == true && foundEverything == true)
+            {
+                dialogText.text = "Thank you so much KAI! You're our saviour!";
+                level2complete = true;
+            }
+        }
+
+        if(col.tag == "Bubbles")
+        {
+            col.gameObject.SetActive(false);
+            Level2.bubblesBlocked++;
+        }
+
+        if(col.tag == "NerioBrother")
+        {
+            col.gameObject.SetActive(false);
+            if(Level2.neriosBrother <= 0)
+            {
+                Level2.neriosBrother++;
             }
         }
 

@@ -11,6 +11,9 @@ TagManager:
   - Coral
   - Trash
   - Boulder
+  - Fire
+  - Bubbles
+  - NerioBrother
   layers:
   - Default
   - TransparentFX

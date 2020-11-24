@@ -20,6 +20,7 @@ public class Compass : MonoBehaviour
     public CompassMarkers shark;
     public CompassMarkers hali;
     public CompassMarkers rock;
+    public CompassMarkers neriobrother;
 
     void Start()
     {
@@ -48,11 +49,17 @@ public class Compass : MonoBehaviour
             AddMarker(hali);
         }
 
+        if (neriobrother != null)
+        {
+            AddMarker(neriobrother);
+        }
+
     }
 
     // Update is called once per frame
     void Update()
     {
+
         compassImage.uvRect = new Rect(player.localEulerAngles.y / 360, 0f, 1f, 1f);
 
         foreach(CompassMarkers marker in compassMarkers)

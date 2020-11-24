@@ -1427,6 +1427,7 @@ MonoBehaviour:
   shark: {fileID: 1913852559}
   hali: {fileID: 8296172667610826488}
   rock: {fileID: 0}
+  neriobrother: {fileID: 0}
 --- !u!114 &984274694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1523,7 +1524,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.2991984
+  m_Radius: 0.35
   m_Center: {x: -0.013536545, y: -0.05109009, z: 0}
 --- !u!95 &1001891767
 Animator:
@@ -1643,7 +1644,7 @@ PrefabInstance:
     - target: {fileID: 1028135938405906031, guid: ccd98740fab8167499e9c07d9f85d6f6,
         type: 3}
       propertyPath: m_Radius
-      value: 1
+      value: 1.16
       objectReference: {fileID: 0}
     - target: {fileID: 1028135938405906031, guid: ccd98740fab8167499e9c07d9f85d6f6,
         type: 3}

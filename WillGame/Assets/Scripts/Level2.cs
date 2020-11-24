@@ -100,7 +100,7 @@ public class Level2 : MonoBehaviour
         {
             placeBubbles[i] = bubble;
 
-            Vector3 pos = new Vector3(Random.Range(-100, 100), 4.1f, Random.Range(-100, 100));
+            Vector3 pos = new Vector3(Random.Range(-50, 50), 4.1f, Random.Range(-50, 50));
             int index = Random.Range(0, 5);
             placeBubbles[i] = Instantiate(bubble, pos, bubble.transform.rotation);
 

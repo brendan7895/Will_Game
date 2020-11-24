@@ -77,7 +77,7 @@ public class Level3Colour : MonoBehaviour
             {             
                 gameOver = true;
                 PlayerController.playerMovement = false;
-                
+                gameOverImage.SetActive(true);
             }
 
             coralCounter = false;

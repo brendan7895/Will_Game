@@ -164,7 +164,7 @@ public class Tutorial : MonoBehaviour
         Time.timeScale = 1;
 
         Debug.Log("Load Level 1");
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("MainWorld");
     }
 
     public void Pause()

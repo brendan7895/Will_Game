@@ -11,9 +11,9 @@ public class Level3Colour : MonoBehaviour
     public GameObject gameOverImage;
 
     public Color[] colour = new Color[5];
-    int count = 0;
-    int trash = 0;
-    int rock = 0;
+    int count = 19;
+    int trash = 14;
+    int rock = 11;
 
     public static bool gameOver = false; // final game over call
 
@@ -76,9 +76,13 @@ public class Level3Colour : MonoBehaviour
             if (count == 20 && trash == 15 && rock == 12)
             {             
                 gameOver = true;
-                PlayerController.playerMovement = false;
-                StartCoroutine(WaitGameOver());
+                if (gameOver == true)
+                {
+                    PlayerController.playerMovement = false;
+                    StartCoroutine(WaitGameOver());
+                }                              
             }
+            //StartCoroutine(WaitFor());
 
             coralCounter = false;
             trashCounter = false;
@@ -91,6 +95,8 @@ public class Level3Colour : MonoBehaviour
     {
         yield return new WaitForSeconds(4);
         gameOverImage.SetActive(true);
+        PlayerController.playerMovement = false;
+        StartCoroutine(WaitFor());
     }
 
     void OnTriggerEnter(Collider col)
@@ -115,10 +121,17 @@ public class Level3Colour : MonoBehaviour
         }
     }
     
-    IEnumerator Wait()
+
+    IEnumerator WaitFor()
     {
         yield return new WaitForSeconds(5);
-        gameOverImage.SetActive(true);
+        gameOver = false;
+        count = 0;
+        rock = 0;
+        trash = 0;
+        PlayerController.playerMovement = true;
+        gameOverImage.SetActive(false);
+        gameOver = true;
     }
     
 }
